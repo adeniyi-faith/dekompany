@@ -1,0 +1,31 @@
+# Ignore system-level logs and server junk
+cgi-bin/
+.DS_Store
+Thumbs.db
+*.log
+index_old.html
+.htaccess
+
+# --- WORDPRESS HOUSING: BLACKLIST EVERYTHING BY DEFAULT ---
+wp/*
+
+# Open narrow windows into wp-content
+!wp/wp-content/
+wp/wp-content/*
+
+# 1. Whitelist Custom mu-plugins Architecture
+!wp/wp-content/mu-plugins/
+wp/wp-content/mu-plugins/*
+!wp/wp-content/mu-plugins/app-logic.php
+!wp/wp-content/mu-plugins/faith-core.php
+!wp/wp-content/mu-plugins/faith-setup.php
+
+# 2. Whitelist Specific Custom Plugins
+!wp/wp-content/plugins/
+wp/wp-content/plugins/*
+!wp/wp-content/plugins/dkhq-chat-ajax/
+
+# 3. Explicitly Ignore Heavy Asset/System Directories
+wp/wp-content/themes/
+wp/wp-content/uploads/
+wp/wp-content/backuply/
