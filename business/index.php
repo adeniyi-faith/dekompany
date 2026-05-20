@@ -144,7 +144,7 @@ include 'header.php'; ?>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="blog-card bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg">
                     <div class="h-48 bg-gray-200 relative">
-                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                         <img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                          <div class="absolute top-4 left-4 bg-white px-3 py-1 text-xs font-bold text-blue-900 rounded shadow">STRATEGY</div>
                     </div>
                     <div class="p-6">
@@ -156,7 +156,7 @@ include 'header.php'; ?>
 
                 <div class="blog-card bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg">
                     <div class="h-48 bg-gray-200 relative">
-                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                         <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                          <div class="absolute top-4 left-4 bg-white px-3 py-1 text-xs font-bold text-blue-900 rounded shadow">FUNDING</div>
                     </div>
                     <div class="p-6">
@@ -168,7 +168,7 @@ include 'header.php'; ?>
 
                 <div class="blog-card bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg">
                     <div class="h-48 bg-gray-200 relative">
-                         <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                         <img loading="lazy" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                          <div class="absolute top-4 left-4 bg-white px-3 py-1 text-xs font-bold text-blue-900 rounded shadow">LEADERSHIP</div>
                     </div>
                     <div class="p-6">
