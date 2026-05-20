@@ -1,0 +1,47 @@
+/* Editorial Typography */
+    .font-display { font-family: 'Playfair Display', serif; }
+
+    /* Elegant Text Gradient */
+    .text-gradient-gold {
+        background: linear-gradient(135deg, #fce7f3 0%, #eab308 50%, #ca8a04 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Image Reveal Effect */
+    .reveal-image-container {
+        position: relative;
+        overflow: hidden;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* Text Highlighter Effect */
+    .highlight-gold {
+        background: linear-gradient(120deg, rgba(234, 179, 8, 0.2) 0%, rgba(234, 179, 8, 0.2) 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 40%;
+        background-position: 0 90%;
+        transition: background-size 0.3s ease;
+    }
+    .highlight-gold:hover { background-size: 100% 100%; }
+
+    /* Custom Scrollbar for this page */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a1128; }
+    ::-webkit-scrollbar-thumb { background: #ca8a04; border-radius: 4px; }
+
+    .drop-cap:first-letter {
+        float: left;
+        font-size: 4rem;
+        line-height: 0.8;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-right: 0.5rem;
+    }

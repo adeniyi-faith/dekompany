@@ -1,0 +1,19 @@
+.brand-pink-text { color: #db2777; }
+    .brand-pink-bg { background-color: #fce7f3; }
+    .brand-gradient { background: linear-gradient(135deg, #0a1128 0%, #1e3a8a 100%); }
+    .letter-paper {
+        background-color: #fff;
+        background-image: radial-gradient(#f0f0f0 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+    .signature-font { font-family: 'Playfair Display', serif; font-style: italic; }
+    .glass-stat-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px -10px rgba(219, 39, 119, 0.15);
+    }

@@ -56,7 +56,7 @@ if ($page->password_protected) {
             <?php if (!empty($pw_error)) echo '<div class="err">' . esc_html($pw_error) . '</div>'; ?>
             <form method="POST"><input type="password" name="pres_password" placeholder="Enter password" required><button type="submit">Access Page</button></form>
             </div></body></html><?php
-            exit;
+            die();
         }
     }
 }
@@ -76,6 +76,10 @@ $card_bg    = $is_business ? '#f8fafc' : '#0c1530';
 $card_border= $is_business ? '#e2e8f0' : '#1a2a5e';
 $nav_bg     = $is_business ? 'rgba(255,255,255,0.97)' : 'rgba(5,10,24,0.97)';
 $hero_text  = $is_business ? '#1e3a8a' : '#ffffff';
+
+$body_class = [];
+if (!$is_business) $body_class[] = 'academic';
+if (!empty($is_preview)) $body_class[] = 'has-preview';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,8 +89,8 @@ $hero_text  = $is_business ? '#1e3a8a' : '#ffffff';
 <title><?php echo esc_html($page->title); ?> — De Kompany</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/presentation.css">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
     --bg: <?php echo $bg_main; ?>;
     --text: <?php echo $text_main; ?>;
@@ -97,93 +101,9 @@ $hero_text  = $is_business ? '#1e3a8a' : '#ffffff';
     --nav-bg: <?php echo $nav_bg; ?>;
     --hero-text: <?php echo $hero_text; ?>;
 }
-body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; }
-
-nav { position: sticky; top: 0; z-index: 50; background: var(--nav-bg); backdrop-filter: blur(8px); border-bottom: 1px solid var(--card-border); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
-.logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: var(--accent); }
-.logo span { color: var(--text); font-weight: 400; font-size: 13px; display: block; opacity: .6; }
-.client-tag { font-size: 12px; background: var(--card-bg); border: 1px solid var(--card-border); padding: 5px 14px; border-radius: 999px; color: var(--accent); font-weight: 600; }
-
-.hero { padding: 80px 24px; max-width: 900px; margin: 0 auto; text-align: center; }
-.hero-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
-.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(32px, 5vw, 58px); font-weight: 800; color: var(--hero-text); line-height: 1.1; margin-bottom: 20px; }
-.hero p { font-size: 18px; opacity: .7; max-width: 640px; margin: 0 auto; line-height: 1.7; }
-
-.sections-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
-.section-block { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 36px; margin-bottom: 24px; }
-.section-block h3 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--accent); margin-bottom: 14px; }
-.section-block p  { line-height: 1.8; opacity: .8; font-size: 15px; }
-.section-block ul { list-style: none; padding: 0; }
-.section-block ul li { padding: 10px 0; border-bottom: 1px solid var(--card-border); display: flex; align-items: center; gap: 10px; font-size: 15px; }
-.section-block ul li:last-child { border: none; }
-.section-block ul li::before { content: '→'; color: var(--accent); font-weight: 700; }
-
-.cta-block { background: var(--accent); border-radius: 14px; padding: 48px; text-align: center; color: white; margin-bottom: 24px; }
-.cta-block h3 { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 12px; }
-.cta-block p  { opacity: .85; font-size: 16px; margin-bottom: 24px; }
-.cta-btn { display: inline-block; background: white; color: var(--accent); font-weight: 700; font-size: 15px; padding: 14px 36px; border-radius: 10px; text-decoration: none; }
-.cta-btn:hover { opacity: .9; }
-
-footer { text-align: center; padding: 32px; font-size: 12px; opacity: .4; border-top: 1px solid var(--card-border); }
-
-<?php if (!$is_business): ?>
-body { background: linear-gradient(180deg, #050a18 0%, #080f24 100%); }
-.hero h1 .gold { color: #e8b84b; }
-<?php endif; ?>
-
-<?php if (!empty($is_preview)): ?>
-.preview-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #f5a442; padding: 8px 20px; font-size: 13px; font-weight: 700; text-align: center; color: #000; }
-body { padding-top: 40px; }
-<?php endif; ?>
 </style>
 </head>
-<body>
-<?php if (!empty($is_preview)): ?>
-<div class="preview-bar">⚠ PREVIEW MODE — This page is not yet published | <a href="./admin/" style="color:#000;text-decoration:underline;">Back to Admin</a></div>
-<?php endif; ?>
-
-<nav>
-    <div class="logo">De Kompany<span>Presentation</span></div>
-    <?php if ($page->client_name): ?>
-    <div class="client-tag">Prepared for <?php echo esc_html($page->client_name); ?></div>
-    <?php endif; ?>
-</nav>
-
-<div class="hero">
-    <div class="hero-eyebrow">Confidential Presentation</div>
-    <h1><?php echo wp_kses_post($page->hero_headline ?: $page->title); ?></h1>
-    <?php if ($page->hero_subheadline): ?>
-    <p><?php echo esc_html($page->hero_subheadline); ?></p>
-    <?php endif; ?>
-</div>
-
-<div class="sections-wrap">
-    <?php foreach ($sections as $section):
-        $type = $section['type'] ?? 'text';
-        if ($type === 'cta'): ?>
-        <div class="cta-block">
-            <h3><?php echo esc_html($section['heading'] ?? ''); ?></h3>
-            <?php if (!empty($section['body'])): ?><p><?php echo esc_html($section['body']); ?></p><?php endif; ?>
-            <?php if (!empty($section['button'])): ?>
-            <a href="<?php echo esc_url($section['link'] ?? '#'); ?>" class="cta-btn"><?php echo esc_html($section['button']); ?></a>
-            <?php endif; ?>
-        </div>
-        <?php elseif ($type === 'list'): ?>
-        <div class="section-block">
-            <h3><?php echo esc_html($section['heading'] ?? ''); ?></h3>
-            <ul><?php foreach ($section['items'] ?? [] as $item): ?><li><?php echo esc_html($item); ?></li><?php endforeach; ?></ul>
-        </div>
-        <?php else: ?>
-        <div class="section-block">
-            <h3><?php echo esc_html($section['heading'] ?? ''); ?></h3>
-            <p><?php echo esc_html($section['body'] ?? ''); ?></p>
-        </div>
-        <?php endif;
-    endforeach; ?>
-</div>
-
-<footer>
-    &copy; <?php echo date('Y'); ?> De Kompany — This document is confidential and prepared exclusively for <?php echo esc_html($page->client_name ?: 'the client'); ?>.
-</footer>
+<body class="<?php echo implode(' ', $body_class); ?>">
+<?php require_once __DIR__ . '/components/presentation/presentation_component.php'; ?>
 </body>
 </html>
