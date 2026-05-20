@@ -37,8 +37,8 @@
                     </a>
 
                     <!-- Mobile Hamburger -->
-                    <button onclick="toggleMobileMenu()" class="md:hidden text-blue-950 focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-blue-950 rounded focus-visible:ring-2 focus-visible:ring-blue-950 outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>

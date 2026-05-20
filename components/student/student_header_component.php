@@ -19,8 +19,8 @@
                     <button onclick="toggleChat()" class="hidden md:block px-5 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-500 transition text-sm font-medium shadow-lg shadow-yellow-600/20">
                         Ask Coach
                     </button>
-                    <button onclick="toggleStudentMenu()" class="md:hidden text-yellow-400 hover:text-white">
-                        <i class="fa-solid fa-bars text-xl"></i>
+                    <button onclick="toggleStudentMenu()" class="md:hidden text-yellow-400 hover:text-white rounded focus-visible:ring-2 focus-visible:ring-yellow-400 outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="student-mobile-menu">
+                        <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>

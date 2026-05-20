@@ -21,8 +21,8 @@
                     <button onclick="toggleChat()" class="hidden md:block px-5 py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition text-sm font-medium shadow-lg shadow-blue-900/20">
                         Consult AI
                     </button>
-                    <button onclick="toggleMobileMenu()" class="md:hidden text-gray-600 hover:text-blue-900">
-                        <i class="fa-solid fa-bars text-xl"></i>
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-gray-600 hover:text-blue-900 rounded focus-visible:ring-2 focus-visible:ring-blue-900 outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
