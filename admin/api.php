@@ -414,7 +414,10 @@ if ($action === 'upload_media') {
     if (!in_array($file['type'], $allowed)) dkhq_json(['ok' => false, 'msg' => 'File type not allowed'], 400);
     if ($file['size'] > 5 * 1024 * 1024) dkhq_json(['ok' => false, 'msg' => 'Max 5MB'], 400);
 
-    $ext      = pathinfo($file['name'], PATHINFO_EXTENSION);
+    $ext      = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    $allowed_exts = ['jpg', 'jpeg', 'png', 'webp', 'svg', 'pdf'];
+    if (!in_array($ext, $allowed_exts)) dkhq_json(['ok' => false, 'msg' => 'File extension not allowed'], 400);
+
     $safe     = sanitize_file_name(pathinfo($file['name'], PATHINFO_FILENAME));
     $filename = $safe . '_' . time() . '.' . $ext;
     $dest     = $dkhq_dir . $filename;
