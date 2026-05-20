@@ -1,0 +1,32 @@
+/* Artistic Background Texture */
+    .paper-texture {
+        background-color: #fdfbf7;
+        background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    }
+
+    /* Typography */
+    .quote-font { font-family: 'Playfair Display', serif; font-style: italic; }
+
+    /* The Line of Curiosity (Timeline) */
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #1e3a8a, #ca8a04, #1e3a8a);
+        transform: translateX(-50%);
+    }
+
+    /* Reveal Animation */
+    .reveal-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: reveal 1s forwards 0.5s;
+    }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+
+    /* The "Dual Mind" Split */
+    .brain-split {
+        background: linear-gradient(90deg, #eff6ff 50%, #fffbeb 50%);
+    }

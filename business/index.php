@@ -1,5 +1,10 @@
 <?php include 'header.php'; ?>
 
+    <?php require_once __DIR__ . '/../components/business/business_index_component.php'; ?>
+
+    <script src="/assets/js/business_index.js"></script>
+include 'header.php'; ?>
+
     <main class="container mx-auto px-6 py-10 md:py-16 pb-32">
         <!-- Hero -->
         <div class="page-transition flex flex-col md:flex-row items-center gap-12 mb-20">
