@@ -14,7 +14,7 @@
      */
 
     // If this file is served as PHP, replace with: get_option('dkhq_gemini_key')
-    const apiKey    = "AIzaSyAMJTeqc2xvNbGzg3FAuaQx44-iGtLpwAM";
+    const apiKey    = "AQ.Ab8RN6KVBexlI_ScHj0yXRDFNcR1j-lbD9-aFGfDabRFjaYBFg";
     const MODEL     = "gemini-2.5-flash";
     const ADMIN_API = "/wp/admin/api.php"; // where logs + leads are captured
 
