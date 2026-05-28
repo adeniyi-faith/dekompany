@@ -25,7 +25,11 @@ wp/wp-content/mu-plugins/*
 wp/wp-content/plugins/*
 !wp/wp-content/plugins/dkhq-chat-ajax/
 
-# 3. Explicitly Ignore Heavy Asset/System Directories
+# Explicitly Ignore Heavy Asset/System Directories
 wp/wp-content/themes/
 wp/wp-content/uploads/
 wp/wp-content/backuply/
+
+# --- 3. TOTAL ACCESS TO YOUR CUSTOM ADMIN FOLDER ---
+# Tell Git to un-ignore your custom standalone admin directory entirely
+!wp/admin/

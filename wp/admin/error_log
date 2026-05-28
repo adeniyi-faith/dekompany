@@ -1,0 +1,192 @@
+[19-Apr-2026 04:10:53 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query SELECT COUNT(*) FROM wp7s_dkhq_takeovers WHERE is_active=1
+[19-Apr-2026 04:10:58 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:11:07 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:11:12 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query SELECT COUNT(*) FROM wp7s_dkhq_takeovers WHERE is_active=1
+[19-Apr-2026 04:11:16 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:11:25 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:11:26 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:11:28 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:29:11 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:29:13 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:29:14 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
+[19-Apr-2026 04:29:20 UTC] WordPress database error Table 'rainofbl_wp401.wp7s_dkhq_takeovers' doesn't exist for query 
+        SELECT cl.session_id, cl.sector,
+               MIN(cl.created_at) as started,
+               MAX(cl.created_at) as last_msg,
+               COUNT(*) as msg_count,
+               (SELECT message FROM wp7s_dkhq_chat_logs cl2
+                WHERE cl2.session_id = cl.session_id AND cl2.sender='user'
+                ORDER BY cl2.id LIMIT 1) as first_msg,
+               COALESCE(
+                   (SELECT 1 FROM wp7s_dkhq_takeovers tk
+                    WHERE tk.session_id = cl.session_id AND tk.is_active = 1 LIMIT 1),
+                   0
+               ) as is_takeover
+        FROM wp7s_dkhq_chat_logs cl
+        
+        GROUP BY cl.session_id, cl.sector
+        ORDER BY last_msg DESC
+        LIMIT 100
+    
