@@ -180,7 +180,8 @@
                 <!-- Damilare -->
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-pink-200 hover:shadow-lg transition text-center group">
                     <div class="w-20 h-20 mx-auto bg-white rounded-full mb-4 shadow-sm p-1">
-                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=DO" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition">
+                         <!-- Bolt: Added lazy loading & async decoding to below-the-fold image -->
+                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=DO" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition" loading="lazy" decoding="async">
                     </div>
                     <h3 class="font-bold text-gray-900">Damilare Olayinka</h3>
                     <p class="text-[10px] text-pink-600 font-bold uppercase tracking-wider mb-3">Chief Word Architect</p>
@@ -190,7 +191,8 @@
                 <!-- Olumide -->
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-pink-200 hover:shadow-lg transition text-center group">
                     <div class="w-20 h-20 mx-auto bg-white rounded-full mb-4 shadow-sm p-1">
-                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=ON" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition">
+                         <!-- Bolt: Added lazy loading & async decoding to below-the-fold image -->
+                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=ON" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition" loading="lazy" decoding="async">
                     </div>
                     <h3 class="font-bold text-gray-900">Olumide Nathaniel</h3>
                     <p class="text-[10px] text-pink-600 font-bold uppercase tracking-wider mb-3">Strategic Analyst</p>
@@ -200,7 +202,8 @@
                 <!-- Folorunsho -->
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-pink-200 hover:shadow-lg transition text-center group">
                      <div class="w-20 h-20 mx-auto bg-white rounded-full mb-4 shadow-sm p-1">
-                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=FT" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition">
+                         <!-- Bolt: Added lazy loading & async decoding to below-the-fold image -->
+                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=FT" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition" loading="lazy" decoding="async">
                     </div>
                     <h3 class="font-bold text-gray-900">Folorunsho Tosin</h3>
                     <p class="text-[10px] text-pink-600 font-bold uppercase tracking-wider mb-3">Visual Strategy Lead</p>
@@ -210,7 +213,8 @@
                 <!-- Agbenike -->
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-pink-200 hover:shadow-lg transition text-center group">
                      <div class="w-20 h-20 mx-auto bg-white rounded-full mb-4 shadow-sm p-1">
-                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=AP" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition">
+                         <!-- Bolt: Added lazy loading & async decoding to below-the-fold image -->
+                         <img src="https://placehold.co/200x200/1e3a8a/ffffff?text=AP" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition" loading="lazy" decoding="async">
                     </div>
                     <h3 class="font-bold text-gray-900">Agbenike Puah</h3>
                     <p class="text-[10px] text-pink-600 font-bold uppercase tracking-wider mb-3">Creative Relations</p>
