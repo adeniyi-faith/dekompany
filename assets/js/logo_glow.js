@@ -163,7 +163,12 @@ YOUR PERSONALITY:
             }
         });
 
-        window.addEventListener('resize', () => scrollToBottom(true));
+        // ⚡ Bolt: Debounce the window resize event to rate-limit scrollToBottom calls and prevent jank.
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => scrollToBottom(true), 120);
+        });
 
         chatForm.addEventListener('submit', async (event) => {
             event.preventDefault();
