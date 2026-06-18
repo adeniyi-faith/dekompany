@@ -91,8 +91,8 @@ $admin_api = function_exists('admin_url') ? admin_url('admin-ajax.php') : '/wp/w
                     <p class="text-xs text-gray-500 mb-4">Strategic insights, no noise.</p>
                     <div class="relative">
                         <input type="email" id="newsletter-email" placeholder="Enter your email address" class="w-full pl-4 pr-12 py-3 bg-white border-0 rounded-xl text-sm text-gray-700 shadow-sm ring-1 ring-gray-100 focus:ring-2 focus:ring-blue-900 focus:outline-none placeholder:text-gray-400">
-                        <button onclick="subscribeNewsletter()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-900 text-white rounded-lg flex items-center justify-center hover:bg-blue-800 transition-colors">
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        <button onclick="subscribeNewsletter()" aria-label="Subscribe to newsletter" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-900 text-white rounded-lg flex items-center justify-center hover:bg-blue-800 transition-colors focus-visible:ring-2 focus-visible:ring-blue-900 outline-none">
+                            <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
@@ -122,8 +122,8 @@ $admin_api = function_exists('admin_url') ? admin_url('admin-ajax.php') : '/wp/w
 <!-- ══════════════════════════════════════════════ -->
 
 <!-- ADDED: The Missing Floating Button to Trigger the Chat -->
-<button onclick="toggleChat()" id="chat-float-btn" class="fixed bottom-6 right-6 z-[49] w-14 h-14 bg-blue-900 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-blue-800 transition-transform transform hover:scale-105" aria-label="Open strategy consultation">
-    <i class="fa-solid fa-briefcase text-xl"></i>
+<button onclick="toggleChat()" id="chat-float-btn" class="fixed bottom-6 right-6 z-[49] w-14 h-14 bg-blue-900 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-blue-800 transition-transform transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-blue-900 outline-none" aria-label="Open strategy consultation">
+    <i class="fa-solid fa-briefcase text-xl" aria-hidden="true"></i>
 </button>
 
 <div id="chat-container" class="fixed bottom-0 right-0 sm:m-4 w-full sm:max-w-sm transform translate-y-[110%] transition-transform duration-500 z-50 font-sans shadow-2xl rounded-t-lg overflow-hidden" style="max-height:90vh;">
@@ -139,7 +139,7 @@ $admin_api = function_exists('admin_url') ? admin_url('admin-ajax.php') : '/wp/w
                 <span class="text-xs opacity-80">De Kompany AI</span>
             </div>
         </div>
-        <button class="text-sm opacity-70 hover:opacity-100 p-2"><i class="fa-solid fa-times text-lg"></i></button>
+        <button aria-label="Close chat" class="text-sm opacity-70 hover:opacity-100 p-2 focus-visible:ring-2 focus-visible:ring-white outline-none rounded"><i class="fa-solid fa-times text-lg" aria-hidden="true"></i></button>
     </div>
 
     <!-- Lead Gate -->
@@ -175,7 +175,7 @@ $admin_api = function_exists('admin_url') ? admin_url('admin-ajax.php') : '/wp/w
     <div id="biz-chat-footer" class="p-3 border-t border-gray-200 bg-gray-50" style="display:none;">
         <form onsubmit="handleChatSubmit(event)" class="flex gap-2">
             <input type="text" id="chat-user-input" placeholder="Type your query…" class="flex-1 p-2 rounded border border-gray-200 text-black focus:outline-none text-sm" autocomplete="off">
-            <button type="submit" id="chat-send-btn" class="px-4 py-2 rounded bg-blue-900 hover:bg-blue-800 text-white transition"><i class="fa-solid fa-paper-plane"></i></button>
+            <button type="submit" id="chat-send-btn" aria-label="Send message" class="px-4 py-2 rounded bg-blue-900 hover:bg-blue-800 text-white transition focus-visible:ring-2 focus-visible:ring-blue-900 outline-none"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
         </form>
     </div>
 </div>
